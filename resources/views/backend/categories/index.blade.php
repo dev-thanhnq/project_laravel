@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Danh sách sản phẩm</h1>
+                <h1 class="m-0 text-dark">Danh sách thể loại</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Danh sách sản phẩm</li>
+                    <li class="breadcrumb-item active">Danh sách thể loại</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -24,23 +24,19 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Giá gốc</th>
-                                <th>Giá bán</th>
-                                <th>Giảm giá(%)</th>
+                                <th>Thể loại</th>
+                                <th>Số sản phẩm</th>
                                 <th>Mô tả</th>
                                 <th>#</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($products as $product)
+                            @foreach($categories as $categoty)
                                 <tr>
-                                    <td>{{ $product->id }}</td>
-                                    <td>{{ $product->name }}</td>
-                                    <td>{{ $product->origin_price }}</td>
-                                    <td>{{ $product->sale_price }}</td>
-                                    <td>{{ $product->discount_percent }}</td>
-                                    <td>{{ $product->content }}</td>
+                                    <td>{{ $categoty->id }}</td>
+                                    <td>{{ $categoty->name }}</td>
+                                    <td></td>
+                                    <td></td>
                                     <td>
                                         <a href="">
                                             <button class="btn btn-primary">Chi tiết</button>
@@ -54,7 +50,7 @@
                             </tfoot>
                         </table>
                         <br>
-                        <div style="float: right">{!! $products->links() !!}</div>
+                        <div style="float: right">{!! $categories->links() !!}</div>
                     </div>
                     <!-- /.card-body -->
                 </div>

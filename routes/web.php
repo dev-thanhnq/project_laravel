@@ -29,4 +29,16 @@ Route::group([
         Route::get('/', [\App\Http\Controllers\Backend\UserController::class, 'index'])->name('backend.user.index');
         Route::get('/create', [\App\Http\Controllers\Backend\UserController::class, 'create'])->name('backend.user.create');
     });
+    //Quản lí thể loại
+    Route::group(['prefix' => 'categories'], function(){
+        Route::get('/', [\App\Http\Controllers\Backend\CategoryController::class, 'index'])->name('backend.categories.index');
+        Route::get('/create', [\App\Http\Controllers\Backend\CategoryController::class, 'create'])->name('backend.categories.create');
+    });
+});
+
+Route::group([
+   'namespace' => 'Frontend',
+], function (){
+    //Trang trủ website
+    Route::get('/', [\App\Http\Controllers\Frontend\HomeController::class, 'index'])->name('frontend.home.index');
 });

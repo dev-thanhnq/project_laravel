@@ -42,7 +42,7 @@
         <!-- Content Header (Page header) -->
 
         <div class="content-header">
-            @yield('content-header')
+            @yield('header-content')
         </div>
         <!-- /.content-header -->
 
@@ -97,27 +97,5 @@
 <script src="/backend/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backend/dist/js/demo.js"></script>
-<!-- DataTables -->
-<script src="/backend/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="/backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="/backend/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="/backend/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script>
-    $(function () {
-        $("#example1").DataTable({
-            "responsive": true,
-            "autoWidth": false,
-        });
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
-    });
-</script>
 </body>
 </html>
